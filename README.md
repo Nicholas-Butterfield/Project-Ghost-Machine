@@ -4,3 +4,4 @@ Hardening a Dell Latitude 5430: Fedora Linux migration, Sway TWM implementation,
 
 ![Windows Idle RAM Usage](baseline_ram_usage.png)
 *Figure 1: Task Manager showing 16GB Baseline and factory idle usage on the Dell Latitude 5430.*
+## Status Update - April 2026: Stealth Hardening Complete
