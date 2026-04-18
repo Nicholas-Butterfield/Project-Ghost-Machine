@@ -1,7 +1,9 @@
-# Project-Ghost-Machine
-Hardening a Dell Latitude 5430: Fedora Linux migration, Sway TWM implementation, and 64GB RAM physical upgrade logs
-### 📸 Baseline Evidence
+### 📸 Phase 1: Software Migration (16GB Baseline)
 
-![Windows Idle RAM Usage](baseline_ram_usage.png)
-*Figure 1: Task Manager showing 16GB Baseline and factory idle usage on the Dell Latitude 5430.*
-## Status Update - April 2026: Stealth Hardening Complete
+| Windows 11 Enterprise (Original) | Fedora Linux (Current State) |
+| :------------------------------: | :--------------------------: |
+| !["Windows baseline"](baseline_ram_usage.png) | !["Fedora 16GB info"](docs/fedora_system_info.png) |
+| *Figure 1: Original Windows 11 Pro* | *Figure 2: Current Fedora Linux Install* |
+
+> [!NOTE]
+> Physical memory currently remains at the **16GB factory baseline**. Documentation for the **64GB RAM upgrade** will be added following hardware installation.
