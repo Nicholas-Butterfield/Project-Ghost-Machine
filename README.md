@@ -26,6 +26,46 @@ The goal is to create a secure, minimal‑surface‑area workstation optimized f
 
 ---
 
+## Phase Roadmap
+
+This project is structured into multiple phases to document the full transformation of the Dell Latitude 5430 into a hardened Linux-based ghost identity node. Each phase includes evidence, configuration details, and security considerations.
+
+### **Phase 1 — Software Migration (Completed)**
+- Migrated from Windows 11 Enterprise to Fedora 43
+- Implemented Sway TWM for minimal attack surface
+- Captured baseline RAM usage and system information
+- Established initial system footprint for comparison
+
+### **Phase 2 — Hardware Upgrade (In Progress)**
+- Upgrade from 16GB to 64GB DDR4 RAM
+- Document installation, BIOS validation, and stability testing
+- Update benchmarks and system performance metrics
+
+### **Phase 3 — System Hardening (Planned)**
+- SELinux enforcing configuration
+- Firewalld rules and service pruning
+- SSH hardening and key-based authentication
+- Auditd rules and system integrity monitoring
+- Minimal package footprint and telemetry reduction
+
+### **Phase 4 — Sway TWM Optimization (Planned)**
+- Custom keybindings and workflow enhancements
+- Secure lockscreen and idle behavior
+- Wayland security benefits and configuration
+- Performance tuning for low-resource overhead
+
+### **Phase 5 — Benchmarks & Analysis (Planned)**
+- RAM usage comparison (Windows vs. Fedora vs. 64GB upgrade)
+- Boot time, CPU load, and power efficiency metrics
+- Security posture comparison before/after hardening
+
+### **Phase 6 — Threat Model & Future Enhancements (Planned)**
+- Define threat actors and attack surfaces
+- Map mitigations implemented across phases
+- Identify remaining risks and future improvements
+
+---
+
 ### 📸 Phase 1: Software Migration (16GB Baseline)
 
 | Windows 11 Enterprise (Original) | Fedora Linux (Current State) |
