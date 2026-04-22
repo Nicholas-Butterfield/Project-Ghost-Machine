@@ -31,10 +31,23 @@ The goal is to create a secure, minimal‑surface‑area workstation optimized f
 This project is structured into multiple phases to document the full transformation of the Dell Latitude 5430 into a hardened Linux-based ghost identity node. Each phase includes evidence, configuration details, and security considerations.
 
 ### **Phase 1 — Software Migration (Completed)**
-- Migrated from Windows 11 Enterprise to Fedora 43
-- Implemented Sway TWM for minimal attack surface
-- Captured baseline RAM usage and system information
-- Established initial system footprint for comparison
+
+* Migrated from Windows 11 Enterprise to Fedora 43
+* Implemented Sway TWM for minimal attack surface
+* Captured baseline RAM usage and system information
+
+| Windows 11 Enterprise (Original) | Fedora Linux (Current State) |
+| :---: | :---: |
+| ![Windows 11](baseline_ram_usage.png) | ![Fedora 43](docs/fedora_system_info.png) |
+| *Figure 1: Windows 16GB Baseline* | *Figure 2: Fedora 16GB Baseline* |
+
+---
+
+</details>
+> [!NOTE]
+> Physical memory currently remains at the **16GB factory baseline**. Documentation for the **64GB RAM upgrade** will be added following hardware installation.
+
+---
 
 ### **Phase 2 — Hardware Upgrade (In Progress)**
 - Upgrade from 16GB to 64GB DDR4 RAM
@@ -201,13 +214,3 @@ This benchmark section will evolve as hardware upgrades and hardening phases are
 - Identify remaining risks and future improvements
 
 ---
-
-### 📸 Phase 1: Software Migration (16GB Baseline)
-
-| Windows 11 Enterprise (Original) | Fedora Linux (Current State) |
-| :------------------------------: | :--------------------------: |
-| !["Windows baseline"](baseline_ram_usage.png) | !["Fedora 16GB info"](docs/fedora_system_info.png) |
-| *Figure 1: Original Windows 11 Pro* | *Figure 2: Current Fedora Linux Install* |
-
-> [!NOTE]
-> Physical memory currently remains at the **16GB factory baseline**. Documentation for the **64GB RAM upgrade** will be added following hardware installation.
