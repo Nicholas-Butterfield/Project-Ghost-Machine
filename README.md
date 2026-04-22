@@ -16,13 +16,13 @@ The goal is to create a secure, minimal‑surface‑area workstation optimized f
 ---
 
 ## Table of Contents
-- [Phase 1: Software Migration](#phase-1-software-migration-16gb-baseline)
-- [Phase 2: Hardware Upgrade](#phase-2-hardware-upgrade)
-- [Phase 3: Hardening](#phase-3-hardening)
-- [Phase 4: Sway Optimization](#phase-4-sway-optimization)
-- [Benchmarks](#benchmarks)
-- [Threat Model](#threat-model)
-- [Future Enhancements](#future-enhancements)
+* [Phase 1: Software Migration](#phase-1--software-migration-completed)
+* [Phase 2: Hardware Upgrade](#phase-2--hardware-upgrade-in-progress)
+* [Phase 3: Hardening](#phase-3--system-hardening-planned)
+* [Phase 4: Sway Optimization](#phase-4--sway-twm-optimization-planned)
+* [Benchmarks](#benchmarks)
+* [Threat Model](#phase-6--threat-model--future-enhancements-planned)
+* [Future Enhancements](#phase-6--threat-model--future-enhancements-planned)
 
 ---
 
