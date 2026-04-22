@@ -21,8 +21,8 @@ The goal is to create a secure, minimal‑surface‑area workstation optimized f
 * [Phase 3: Hardening](#phase-3--system-hardening-planned)
 * [Phase 4: Sway Optimization](#phase-4--sway-twm-optimization-planned)
 * [Benchmarks](#benchmarks)
-* [Threat Model](#phase-6--threat-model--future-enhancements-planned)
-* [Future Enhancements](#phase-6--threat-model--future-enhancements-planned)
+* [Phase 6: Threat Model](#phase-6--threat-model-planned)
+* [Phase 7: Future Enhancements](#phase-7--future-enhancements-planned)
 
 ---
 
@@ -191,26 +191,36 @@ This benchmark section will evolve as hardware upgrades and hardening phases are
 ---
 
 ### **Phase 3 — System Hardening (Planned)**
-- SELinux enforcing configuration
-- Firewalld rules and service pruning
-- SSH hardening and key-based authentication
-- Auditd rules and system integrity monitoring
-- Minimal package footprint and telemetry reduction
+
+* SELinux enforcing configuration
+* Firewalld rules and service pruning
+* SSH hardening and key-based authentication
+* Auditd rules and system integrity monitoring
+* Minimal package footprint and telemetry reduction
 
 ### **Phase 4 — Sway TWM Optimization (Planned)**
-- Custom keybindings and workflow enhancements
-- Secure lockscreen and idle behavior
-- Wayland security benefits and configuration
-- Performance tuning for low-resource overhead
+
+* Custom keybindings and workflow enhancements
+* Secure lockscreen and idle behavior
+* Wayland security benefits and configuration
+* Performance tuning for low-resource overhead
 
 ### **Phase 5 — Benchmarks & Analysis (Planned)**
-- RAM usage comparison (Windows vs. Fedora vs. 64GB upgrade)
-- Boot time, CPU load, and power efficiency metrics
-- Security posture comparison before/after hardening
 
-### **Phase 6 — Threat Model & Future Enhancements (Planned)**
-- Define threat actors and attack surfaces
-- Map mitigations implemented across phases
-- Identify remaining risks and future improvements
+* RAM usage comparison (Windows vs. Fedora vs. 64GB upgrade)
+* Boot time, CPU load, and power efficiency metrics
+* Security posture comparison before/after hardening
 
----
+### **Phase 6 — Threat Model (Planned)**
+
+* Define threat actors and local/network attack surfaces
+* Map mitigations implemented across migration phases
+* Analyze Wayland protocol isolation vs. X11 vulnerabilities
+* Establish baseline for "subrootghost" privilege escalation defense
+
+### **Phase 7 — Future Enhancements (Planned)**
+
+* Automation via Python/Bash hardening playbooks
+* KVM/QEMU "Detonation Lab" for sacrificial virtualization
+* Local AI log triage using hardware-level NPU integration
+* Automated WireGuard tunnel implementation with killswitch
