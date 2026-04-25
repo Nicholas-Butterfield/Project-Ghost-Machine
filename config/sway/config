@@ -212,21 +212,38 @@ bindsym $mod+r mode "resize"
     bindsym Print exec grim
 
 #
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
+# --- Project-Ghost-Machine Aesthetics ---
+
+# 1. Output & Scaling (Dell 5430 Optimized)
+output eDP-1 scale 1.5
+
+# 2. Gaps (The 8/3 Tiling Layout)
+gaps inner 8
+gaps outer 3
+smart_gaps off
+default_border pixel 2
+
+# 3. Window Colors (Border, Background, Text, Indicator, Child_Border)
+client.focused          #00ff41 #000000 #00ff41 #00ff41 #00ff41
+client.focused_inactive #323232 #000000 #323232 #323232 #323232
+client.unfocused        #323232 #000000 #323232 #323232 #323232
+
+# 4. Status Bar
 bar {
     position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
     status_command while date +'%Y-%m-%d %X'; do sleep 1; done
 
     colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
+        # The high-contrast Emerald look
+        statusline #00ff41
+        background #000000
+        
+        # Border, Background, Text
+        focused_workspace  #003b00 #003b00 #00ff41
+        inactive_workspace #000000 #000000 #008800
+        urgent_workspace   #ff0000 #000000 #ffffff
     }
 }
 
+# Keep system overrides at the very end
 include /etc/sway/config.d/*
