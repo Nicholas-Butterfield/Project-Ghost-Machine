@@ -19,7 +19,7 @@ The goal is to create a secure, minimal‑surface‑area workstation optimized f
 * [Phase 1: Software Migration](#phase-1--software-migration-completed)
 * [Phase 2: Hardware Upgrade](#phase-2--hardware-upgrade-in-progress)
 * [Phase 3: Hardening](#phase-3--system-hardening-planned)
-* [Phase 4: Sway Optimization](#phase-4--sway-twm-optimization-planned)
+* [Phase 4 — Sway TWM Optimization (In-Progress)](#phase-4--sway-twm-optimization-in-progress)
 * [Benchmarks](#benchmarks)
 * [Phase 6: Threat Model](#phase-6--threat-model-planned)
 * [Phase 7: Future Enhancements](#phase-7--future-enhancements-planned)
@@ -46,6 +46,13 @@ This project is structured into multiple phases to document the full transformat
 </details>
 > [!NOTE]
 > Physical memory currently remains at the **16GB factory baseline**. Documentation for the **64GB RAM upgrade** will be added following hardware installation.
+
+---
+
+## 🕵️‍♂️ Troubleshooting Log (2026-04-25)
+- **Identity Resolution**: Corrected remote origin from `subrootghost` to `Nicholas-Butterfield` to resolve `404 Not Found` authentication errors.
+- **Structural Conflict**: Resolved `CONFLICT (file/directory)` by migrating the local `config` file to a directory structure to match the repository HEAD.
+- **History Integration**: Utilized `--allow-unrelated-histories` to bridge the gap between the new local Acer setup and the existing Dell-originated GitHub repository.
 
 ---
 
@@ -198,12 +205,14 @@ This benchmark section will evolve as hardware upgrades and hardening phases are
 * Auditd rules and system integrity monitoring
 * Minimal package footprint and telemetry reduction
 
-### **Phase 4 — Sway TWM Optimization (Planned)**
+### **Phase 4 — Sway TWM Optimization (In-Progress)**
 
-* Custom keybindings and workflow enhancements
-* Secure lockscreen and idle behavior
-* Wayland security benefits and configuration
-* Performance tuning for low-resource overhead
+* **[Completed]** Establish cross-platform configuration synchronization via Git (Acer to Dell).
+* **[Completed]** Identity & Access Management (IAM) resolution for GitHub repository authentication.
+* **[Completed]** Deployment of cinematic assets (Matrix background) across lab nodes.
+* **[Active]** Refinement of `sway/config` keybindings and workspace logic.
+* **[Planned]** Secure session handling via `swaylock` and `swayidle` implementation.
+* **[Planned]** Wayland-native security auditing and protocol isolation testing.
 
 ### **Phase 5 — Benchmarks & Analysis (Planned)**
 
