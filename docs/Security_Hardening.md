@@ -37,6 +37,13 @@ This section details the transition from "Workstation Default" to a "Hardened La
     - **Status:** Identified as active via `ss -tulpn`. 
     - **Risk:** Vulnerable to spoofing/poisoning attacks.
 
+### **4.3 Resolution of Persistent Services (mDNS/LLMNR)**
+- **Post-Configuration Audit:** Identified orphan `avahi-daemon` processes bypasssing initial `systemctl stop` commands.
+- **Remediation:** - Manually terminated PID 60254 (`SIGKILL`).
+    - Configured NetworkManager connection `Alpha1-6G` to `connection.mdns no`.
+    - Explicitly defined `LLMNR=no` and `MulticastDNS=no` in `/etc/systemd/resolved.conf`.
+- **Validation:** Confirmed zero listeners on 5353/UDP and 5355/UDP post-reboot.
+  
 ---
 
 ## 5. Audit Log & Version History
