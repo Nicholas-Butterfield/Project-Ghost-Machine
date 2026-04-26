@@ -43,13 +43,36 @@ This section details the transition from "Workstation Default" to a "Hardened La
     - Configured NetworkManager connection `Alpha1-6G` to `connection.mdns no`.
     - Explicitly defined `LLMNR=no` and `MulticastDNS=no` in `/etc/systemd/resolved.conf`.
 - **Validation:** Confirmed zero listeners on 5353/UDP and 5355/UDP post-reboot.
-  
+
+## 5. Secure Remote Access (SSH Hardening)
+
+To enable secure administration of the Ghost Machine from the primary workstation (Wolf), a hardened SSH configuration was implemented to replace traditional password-based authentication.
+
+### **5.1 Asymmetric Cryptography & Key Management**
+- **Algorithm:** Ed25519 (Elliptic Curve Cryptography) was selected for its high security-to-key-size ratio and resistance to side-channel attacks.
+- **2FA Implementation:** The private key on the workstation is encrypted with a unique passphrase, requiring "Something You Have" (the key file) and "Something You Know" (the passphrase).
+- **Permissions Lockdown:** Strict Linux filesystem permissions were applied to the SSH directory structure to prevent unauthorized access:
+  - `~/.ssh/` directory: `700` (drwx------)
+  - `authorized_keys` file: `600` (-rw-------)
+
+### **5.2 SSH Daemon (sshd) Configuration**
+The `/etc/ssh/sshd_config` file was modified to enforce a "Zero Trust" posture for remote connections:
+- **`PasswordAuthentication no`**: Disables all password-based logins to mitigate brute-force and credential-stuffing attacks.
+- **`PubkeyAuthentication yes`**: Restricts access exclusively to authorized cryptographic keys.
+- **`PermitRootLogin prohibit-password`**: Ensures the root user cannot be accessed via password, further protecting the system's core.
+
+### **5.3 Connection Optimization**
+A local SSH configuration file was created on the workstation to map the lab's identity. This allows for rapid, secure deployment via `ssh ghost`, abstracting the underlying network infrastructure and reducing manual entry errors.
+
 ---
 
-## 5. Audit Log & Version History
+## 6. Audit Log & Version History
 
 | Date | Action | Performed By |
 | :--- | :--- | :--- |
 | 2026-04-25 | Initial Network Audit (`ss`, `firewall-cmd`) | subrootghost |
 | 2026-04-25 | Closure of 1025-65535 port ranges | subrootghost |
 | 2026-04-25 | Decommissioning of CUPS service | subrootghost |
+| 2026-04-26 | Implementation of Ed25519 SSH Key-Based Auth | subrootghost |
+| 2026-04-26 | Hardened `sshd_config` (Disabled Passwords) | subrootghost |
+| 2026-04-26 | Configured Workstation SSH Alias (`ghost`) | subrootghost |
