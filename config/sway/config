@@ -22,6 +22,7 @@ set $menu wmenu-run
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /home/subrootghost/Pictures/matrix.jpg fill
+output eDP-1 scale 1.5
 #
 # Example configuration:
 #
